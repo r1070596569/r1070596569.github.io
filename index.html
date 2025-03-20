@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">
 </head>
 <body>
   <div id="app"></div>
@@ -30,6 +31,14 @@
       subMaxLevel: 4,
       // 小屏设备下合并导航栏到侧边栏
       mergeNavbar: true,
+	  
+	  autoHeader: true,
+	  
+	  mergeNavbar: true,
+	  
+	  topMargin: 15,
+
+	  
       /*搜索相关设置*/
       search: {
           maxAge: 86400000,// 过期时间，单位毫秒，默认一天
@@ -43,7 +52,46 @@
           depth: 4,
           hideOtherSidebarContent: false,
           namespace: 'NaturalBean',
-      }
+      },
+	  // 复制脚本
+	  copyCode: {
+	    buttonText: {
+	      '/': '复制代码',
+	      '/en/': 'Copy to clipboard',
+	    },
+	    errorText: {
+	      '/': '复制失败',
+	      '/en/': 'Error',
+	    },
+	    successText: {
+	      '/': '复制成功',
+	      '/en/': 'Copied',
+	    },
+	  },
+	  count:{
+	    countable: true,
+	    position: 'top',
+	    margin: '10px',
+	    float: 'right',
+	    fontsize:'0.9em',
+	    color:'rgb(90,90,90)',
+	    language:'chinese',
+	    localization: {
+	      words: "",
+	      minute: ""
+	    },
+	    isExpected: true,
+	  },
+	  pagination: {
+	    previousText: '上一章',
+	    nextText: {
+	      '/en/': 'NEXT',
+	      '/': '下一章'
+	    },
+	    crossChapter: true,
+	    crossChapterText: true,
+	  },
+
     }
   </script>
   <!-- Docsify v4 -->
@@ -54,7 +102,30 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- 搜索功能支持 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 全文搜索时忽略双音符 -->
+  <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+  <!-- 外链脚本 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+
   <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 支持 Vue3 语法 -->
+  <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
+
+
+
+
 </body>
 </html>
