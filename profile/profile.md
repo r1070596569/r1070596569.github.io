@@ -32,9 +32,9 @@ echo "欢迎来到Bash脚本示例！"
 # 定义变量  
 name="John Doe"  
 age=30  
-//```
+```
 
-//```php
+```php
 <?php  
 
 // 打印欢迎消息  
