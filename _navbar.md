@@ -1,3 +1,3 @@
-- Translations
+- 语言
   - [:cn: 简体中文](/)
-  - [:uk: English](/en)
+  <!-- - [:uk: English](/en) -->
