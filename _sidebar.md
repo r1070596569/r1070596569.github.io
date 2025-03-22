@@ -1,4 +1,4 @@
-* [简介](profile/profile.md "个人简介")
+<!-- * [简介](profile/profile.md "个人简介") -->
 
 * 算法学习
 
