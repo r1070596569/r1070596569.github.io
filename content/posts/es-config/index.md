@@ -1,5 +1,5 @@
 ---
-title: ES字段拆分配置
+title: es-config
 date: 2025-12-17T16:53:17Z
 lastmod: 2025-12-19T17:10:44Z
 ---
