@@ -2,13 +2,13 @@
 
 ## 🏗️ 架构目录
 
-### 架构设计
+### [架构设计](/content/ai-agent-architecture/architecture-design.md)
 - [架构概览](/content/ai-agent-architecture/architecture-design.md#1-架构概览)
 - [服务分层说明](/content/ai-agent-architecture/architecture-design.md#2-服务分层说明)
 - [技术栈选型](/content/ai-agent-architecture/architecture-design.md#3-技术栈选型)
 - [部署架构](/content/ai-agent-architecture/architecture-design.md#4-部署架构)
 
-### 核心功能模块
+### [核心功能模块](/content/ai-agent-architecture/core-modules.md)
 - [AI能力模块详细设计](/content/ai-agent-architecture/core-modules.md#1-ai能力模块详细设计)
 - [作业结构化提取模块](/content/ai-agent-architecture/core-modules.md#11-作业结构化提取模块-homework-extraction-module)
 - [AI聊天答疑模块](/content/ai-agent-architecture/core-modules.md#12-ai聊天答疑模块-chat-ai-module)
@@ -16,7 +16,7 @@
 - [接口规范详细定义](/content/ai-agent-architecture/core-modules.md#2-接口规范详细定义)
 - [WebSocket实时交互接口](/content/ai-agent-architecture/core-modules.md#23-websocket-实时交互接口)
 
-### 智能体实现细节
+### [智能体实现细节](/content/ai-agent-architecture/agent-implementation.md)
 - [智能体核心架构](/content/ai-agent-architecture/agent-implementation.md#1-智能体核心类设计)
 - [智能体抽象层设计](/content/ai-agent-architecture/agent-implementation.md#11-基础智能体抽象类)
 - [智能体上下文管理](/content/ai-agent-architecture/agent-implementation.md#3-智能体策略系统)
@@ -26,7 +26,7 @@
 - [智能体状态监控](/content/ai-agent-architecture/agent-implementation.md#5-智能体监控和调试)
 - [作业智能体的具体应用场景](/content/ai-agent-architecture/agent-implementation.md#6-智能体状态持久化)
 
-### 技术规范
+### [技术规范](/content/ai-agent-architecture/technical-specification.md)
 - [方案概述](/content/ai-agent-architecture/technical-specification.md#1-方案概述)
 - [整体架构设计](/content/ai-agent-architecture/technical-specification.md#2-整体架构设计)
 - [核心功能模块](/content/ai-agent-architecture/technical-specification.md#3-核心功能模块)
@@ -39,7 +39,7 @@
 - [风险评估与应对](/content/ai-agent-architecture/technical-specification.md#10-风险评估与应对)
 - [智能体架构具体实现细节](/content/ai-agent-architecture/technical-specification.md#智能体架构具体实现细节)
 
-### 设计模式
+### [设计模式](/content/ai-agent-architecture/design-patterns.md)
 - [核心设计模式应用](/content/ai-agent-architecture/design-patterns.md#1-核心设计模式应用)
 - [策略模式](/content/ai-agent-architecture/design-patterns.md#11-策略模式strategy-pattern)
 - [工厂模式](/content/ai-agent-architecture/design-patterns.md#12-工厂模式factory-pattern)
@@ -55,7 +55,7 @@
 - [设计模式组合应用](/content/ai-agent-architecture/design-patterns.md#3-设计模式组合应用)
 - [架构决策记录](/content/ai-agent-architecture/design-patterns.md#4-架构决策记录adr)
 
-### 扩展性方案
+### [扩展性方案](/content/ai-agent-architecture/scalability-solution.md)
 - [高并发解决方案](/content/ai-agent-architecture/scalability-solution.md#1-高并发解决方案)
 - [异步非阻塞架构](/content/ai-agent-architecture/scalability-solution.md#11-异步非阻塞架构)
 - [连接池和资源管理](/content/ai-agent-architecture/scalability-solution.md#12-连接池和资源管理)
@@ -72,7 +72,7 @@
 - [性能监控和调优](/content/ai-agent-architecture/scalability-solution.md#33-性能监控和调优)
 - [三高架构总结](/content/ai-agent-architecture/scalability-solution.md#4-三高架构总结)
 
-### 实施路线图
+### [实施路线图](/content/ai-agent-architecture/roadmap.md)
 - [项目概述](/content/ai-agent-architecture/roadmap.md#1-实施路线图)
 - [实施阶段](/content/ai-agent-architecture/roadmap.md#11-第一阶段1-2周基础架构搭建)
 - [里程碑计划](/content/ai-agent-architecture/roadmap.md#12-第二阶段2-3周智能体核心功能)
