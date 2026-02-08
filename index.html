@@ -283,6 +283,15 @@
       resetToc();
       setTimeout(initTocDrawer, 500);
       setTimeout(updateSidebarActiveState, 100);
+      // 确保跳转到页面顶部
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 100);
+    });
+    
+    // 监听页面加载，确保跳转到顶部
+    window.addEventListener('load', function() {
+      window.scrollTo(0, 0);
     });
     
     // 页面加载完成后更新侧边栏状态
