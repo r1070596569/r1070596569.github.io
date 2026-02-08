@@ -1,104 +1,91 @@
 # 作业AI智能体架构
 
-## 🏗️ 系统架构概览
+## 🏗️ 架构目录
 
-### 核心架构设计
-- [整体架构设计](architecture-design.md#1-架构概览)
-- [服务分层说明](architecture-design.md#2-服务分层说明)
-- [技术栈选型](architecture-design.md#3-技术栈选型)
-- [部署架构](architecture-design.md#4-部署架构)
+### 架构设计
+- [架构设计](/content/ai-agent-architecture/architecture-design.md)
+  - 架构概览
+  - 服务分层说明
+  - 技术栈选型
+  - 部署架构
 
 ### 核心功能模块
-- [AI编排服务](core-modules.md#ai-编排服务)
-- [AI处理服务](core-modules.md#ai-处理服务)
-- [智能体管理服务](core-modules.md#智能体管理服务)
-- [模型网关服务](core-modules.md#模型网关服务)
+- [核心功能模块](/content/ai-agent-architecture/core-modules.md)
+  - AI能力模块详细设计
+  - 作业结构化提取模块
+  - AI聊天答疑模块
+  - 作业批改模块
+  - 接口规范详细定义
+  - WebSocket实时交互接口
 
 ### 智能体实现细节
-- [智能体生命周期管理](agent-implementation.md#智能体生命周期管理)
-- [状态机设计](agent-implementation.md#状态机设计)
-- [任务调度机制](agent-implementation.md#任务调度机制)
-- [错误处理与重试](agent-implementation.md#错误处理与重试)
+- [智能体实现细节](/content/ai-agent-architecture/agent-implementation.md)
+  - 智能体核心架构
+  - 智能体抽象层设计
+  - 智能体上下文管理
+  - 智能体记忆系统
+  - 作业通用场景智能体详细设计
+  - 智能体编排和协调
+  - 智能体状态监控
+  - 作业智能体的具体应用场景
 
 ### 技术规范
-- [API设计规范](technical-specification.md#api设计规范)
-- [数据模型设计](technical-specification.md#数据模型设计)
-- [安全设计](technical-specification.md#安全设计)
-- [性能优化](technical-specification.md#性能优化)
+- [技术规范](/content/ai-agent-architecture/technical-specification.md)
+  - 方案概述
+  - 整体架构设计
+  - 核心功能模块
+  - 智能体模块
+  - 接口规范
+  - 三高解决方案
+  - 设计模式应用
+  - 部署架构
+  - 监控与运维
+  - 实施路线图
+  - 风险评估与应对
+  - 智能体架构具体实现细节
 
-### 设计模式与架构模式
-- [微服务架构模式](design-patterns.md#微服务架构模式)
-- [事件驱动架构](design-patterns.md#事件驱动架构)
-- [CQRS模式](design-patterns.md#cqrs模式)
-- [策略模式](design-patterns.md#策略模式)
+### 设计模式
+- [设计模式](/content/ai-agent-architecture/design-patterns.md)
+  - 核心设计模式应用
+  - 策略模式
+  - 工厂模式
+  - 装饰器模式
+  - 观察者模式
+  - 命令模式
+  - 架构模式应用
+  - 分层架构
+  - 微服务架构
+  - 事件驱动架构
+  - CQRS模式
+  - 管道-过滤器模式
+  - 设计模式组合应用
+  - 架构决策记录
+
+### 扩展性方案
+- [扩展性方案](/content/ai-agent-architecture/scalability-solution.md)
+  - 高并发解决方案
+  - 异步非阻塞架构
+  - 连接池和资源管理
+  - 多级缓存策略
+  - 限流和熔断
+  - 高可用解决方案
+  - 服务集群和负载均衡
+  - 自动扩缩容
+  - 故障转移和健康检查
+  - 数据持久化和备份
+  - 高性能解决方案
+  - 模型缓存和预加载
+  - 批处理和向量化
+  - 性能监控和调优
+  - 三高架构总结
 
 ### 实施路线图
-- [第一阶段：基础架构搭建](roadmap.md#第一阶段基础架构搭建)
-- [第二阶段：核心功能开发](roadmap.md#第二阶段核心功能开发)
-- [第三阶段：AI能力集成](roadmap.md#第三阶段ai能力集成)
-- [第四阶段：性能优化与监控](roadmap.md#第四阶段性能优化与监控)
-
-## 🎯 系统特性
-
-### 高可用性
-- 服务冗余部署
-- 故障自动转移
-- 数据备份与恢复
-- 监控告警机制
-
-### 可扩展性
-- 微服务架构
-- 水平扩展支持
-- 插件化设计
-- 动态配置管理
-
-### 安全性
-- 身份认证与授权
-- 数据加密传输
-- 访问控制
-- 安全审计
-
-### 性能优化
-- 缓存策略
-- 异步处理
-- 负载均衡
-- 资源池化
-
-## 🛠️ 技术栈
-
-### 后端技术
-- **框架**: Spring Boot 3.4.2, Spring Cloud 2024.0.0
-- **AI框架**: Spring AI 1.0.0
-- **数据库**: MySQL 8.0+, MongoDB 6.0+, Redis 7.0+
-- **消息队列**: RocketMQ 5.0+
-- **服务治理**: Nacos 2.2+
-
-### AI技术
-- **大模型**: 通义千问 Qwen-Max/Plus
-- **向量数据库**: Milvus 2.3+
-- **机器学习**: TensorFlow, PyTorch
-- **自然语言处理**: LangChain, LlamaIndex
-
-### 监控运维
-- **链路追踪**: SkyWalking 9.5+
-- **指标监控**: Prometheus 2.40+
-- **可视化**: Grafana 10.0+
-- **日志分析**: ELK Stack
-
-## 📋 实施计划
-
-### 开发阶段
-1. **需求分析与设计** (2周)
-2. **基础架构搭建** (3周)
-3. **核心功能开发** (6周)
-4. **AI能力集成** (4周)
-5. **测试与优化** (3周)
-
-### 部署阶段
-1. **开发环境部署** (1周)
-2. **测试环境验证** (2周)
-3. **生产环境部署** (1周)
-4. **监控与运维** (持续)
+- [实施路线图](/content/ai-agent-architecture/roadmap.md)
+  - 项目概述
+  - 实施阶段
+  - 里程碑计划
+  - 资源配置
+  - 风险管控
 
 ---
 
