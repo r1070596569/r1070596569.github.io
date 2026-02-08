@@ -1,4 +1,4 @@
-##### 📖 我的学习笔记
+##### >> 我的学习笔记
 
 * AI智能体开发
   * [Python学习](content/python-learning/README.md)
@@ -11,6 +11,8 @@
     * [核心功能模块](content/ai-agent-architecture/core-modules.md)
     * [智能体实现细节](content/ai-agent-architecture/agent-implementation.md)
     * [技术规范](content/ai-agent-architecture/technical-specification.md)
+    * [核心设计模式应用](/content/ai-agent-architecture/design-patterns.md)
+    * [高并发解决方案](/content/ai-agent-architecture/scalability-solution.md)
     * [实施路线图](content/ai-agent-architecture/roadmap.md)
 
 * 算法学习
