@@ -70,14 +70,22 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       Promise.race([fetched.catch(_ => cached), cached])
         .then(resp => resp || fetched)
-        .catch(_ => { /* eat any errors */ })
+        .catch(_ => {
+          // 如果所有都失败，返回一个基本的响应
+          return new Response('Offline', { status: 200 });
+        })
     )
 
     // Update the cache with the version we fetched (only for ok status)
     event.waitUntil(
       Promise.all([fetchedCopy, caches.open(RUNTIME)])
-        .then(([response, cache]) => response.ok && cache.put(event.request, response))
-        .catch(_ => { /* eat any errors */ })
+        .then(([response, cache]) => {
+          if (response && response.ok) {
+            return cache.put(event.request, response);
+          }
+          return Promise.resolve();
+        })
+        .catch(_ => Promise.resolve())
     )
   }
 })

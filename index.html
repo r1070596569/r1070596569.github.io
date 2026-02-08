@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="css/programmer-theme.css">
+  <link rel="stylesheet" href="css/clean-professional.css">
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1/themes/prism-tomorrow.css">
-  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+  <link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.css">
 </head>
 <body>
   <div id="app"></div>
+  
   <script>
     window.$docsify = {
       // 项目名称
-      name: 'NaturalBean的学习笔记',
+      name: '',
       // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
       // repo: 'https://github.com/YSGStudyHards',
       // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
@@ -30,7 +30,7 @@
       // 最大支持渲染的标题层级
       maxLevel: 5,
       // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
-      subMaxLevel: 4,
+      subMaxLevel: 0,
       // 小屏设备下合并导航栏到侧边栏
       mergeNavbar: true,
 	  
@@ -40,10 +40,9 @@
       
       topMargin: 15,
 
-      themeColor: '#4ec9b0',
-      sidebarDisplayLevel: 2,
-
-	  
+      themeColor: '#2088ff',
+      
+   
       /*搜索相关设置*/
       search: {
           maxAge: 86400000,// 过期时间，单位毫秒，默认一天
@@ -89,40 +88,76 @@
       },
       pagination: {
         previousText: '上一章',
-        nextText: {
-          '/en/': 'NEXT',
-          '/': '下一章'
-        },
-        crossChapter: true,
-        crossChapterText: true,
+        nextText: '下一章',
+        crossChapter: false,
+        crossChapterText: false,
       },
 
     }
   </script>
   <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://unpkg.com/docsify@4.13.0/lib/docsify.min.js"></script>
   <!-- emoji表情支持 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="https://unpkg.com/docsify@4.13.0/lib/plugins/emoji.min.js"></script>
   <!-- 图片放大缩小支持 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://unpkg.com/docsify@4.13.0/lib/plugins/zoom-image.min.js"></script>
   <!-- 搜索功能支持 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="https://unpkg.com/docsify@4.13.0/lib/plugins/search.min.js"></script>
   <!-- 全文搜索时忽略双音符 -->
-  <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+  <!-- <script src="https://unpkg.com/polyfill-service@3.52.2/polyfill.min.js?features=String.prototype.normalize"></script> -->
   <!-- 外链脚本 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
-  <!-- 侧边栏折叠 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="https://unpkg.com/docsify@4.13.0/lib/plugins/external-script.min.js"></script>
 
-  <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- 右键菜单功能 -->
+  <div id="context-menu" class="context-menu">
+    <div class="context-menu-item" data-action="copy-code">
+      <span class="context-menu-item-icon">📋</span>
+      复制代码
+    </div>
+    <div class="context-menu-separator"></div>
+    <div class="context-menu-item" data-action="select-all">
+      <span class="context-menu-item-icon">⬚</span>
+      全选
+    </div>
+  </div>
   <!-- 字数统计 -->
-  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <script src="https://unpkg.com/docsify-count@1.1.0/dist/countable.min.js"></script>
   
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-bash.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-java.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-python.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-yaml.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-sql.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-json.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-css.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-docker.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-nginx.min.js"></script>
+  <script src="https://unpkg.com/docsify-pagination@2.2.0/dist/docsify-pagination.min.js"></script>
   <script>
+    // 确保侧边栏选中状态正常工作
+    function updateSidebarActiveState() {
+      const currentPath = window.location.hash || '#/';
+      const sidebarLinks = document.querySelectorAll('.sidebar a');
+      
+      sidebarLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.add('active');
+          // 展开父级菜单
+          let parent = link.parentElement;
+          while (parent && parent.classList.contains('ul')) {
+            parent = parent.parentElement;
+            if (parent && parent.tagName === 'LI') {
+              parent.classList.add('active');
+            }
+          }
+        }
+      });
+    }
+    
     // 添加页面滚动动画
     document.addEventListener('scroll', function() {
       const headings = document.querySelectorAll('h2, h3');
@@ -133,13 +168,365 @@
         }
       });
     });
+    
+    let tocInitialized = false;
+    
+    // 创建目录抽屉切换按钮
+    function createTocToggle() {
+      // 检查是否已存在切换按钮
+      if (document.querySelector('.toc-toggle')) {
+        return;
+      }
+      
+      const toggle = document.createElement('button');
+      toggle.className = 'toc-toggle';
+      toggle.innerHTML = '☰';
+      toggle.title = '显示/隐藏目录';
+      document.body.appendChild(toggle);
+      
+      toggle.addEventListener('click', function() {
+        const toc = document.querySelector('.toc');
+        if (toc) {
+          toc.classList.toggle('open');
+          toggle.innerHTML = toc.classList.contains('open') ? '✕' : '☰';
+        }
+      });
+    }
+    
+    // 初始化目录抽屉
+    function initTocDrawer() {
+      if (tocInitialized) {
+        return;
+      }
+      
+      // 等待页面加载完成
+      setTimeout(function() {
+        createTocToggle();
+        
+        // 查找或创建TOC容器
+        let toc = document.querySelector('.toc');
+        if (!toc) {
+          toc = document.createElement('div');
+          toc.className = 'toc';
+          document.body.appendChild(toc);
+        }
+        
+        // 清空现有内容
+        toc.innerHTML = '';
+        
+        // 生成目录内容
+        const headings = document.querySelectorAll('.markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6');
+        if (headings.length > 0) {
+          let tocHtml = '<div class="toc-title">目录</div><ul>';
+          
+          headings.forEach((heading, index) => {
+            const level = parseInt(heading.tagName.substring(1));
+            const text = heading.textContent.trim();
+            const id = heading.id || `heading-${index}`;
+            
+            if (!heading.id) {
+              heading.id = id;
+            }
+            
+            tocHtml += `<li class="toc-level-${level}"><a href="#${id}" class="toc-link">${text}</a></li>`;
+          });
+          
+          tocHtml += '</ul>';
+          toc.innerHTML = tocHtml;
+          
+          // 添加点击事件监听
+          toc.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              const targetId = this.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+              
+              if (targetElement) {
+                targetElement.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+                
+                // 更新活动状态
+                toc.querySelectorAll('.toc-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+              }
+            });
+          });
+          
+          // 处理跨页面锚点跳转
+          handleCrossPageAnchors();
+        }
+        
+        tocInitialized = true;
+      }, 1000);
+    }
+    
+    // 重置目录状态
+    function resetToc() {
+      tocInitialized = false;
+      const toc = document.querySelector('.toc');
+      if (toc) {
+        toc.innerHTML = '';
+      }
+    }
+    
+    // 页面加载完成后初始化
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTocDrawer);
+    } else {
+      initTocDrawer();
+    }
+    
+    // 监听路由变化，重新生成目录和更新侧边栏状态
+    window.addEventListener('hashchange', function() {
+      resetToc();
+      setTimeout(initTocDrawer, 500);
+      setTimeout(updateSidebarActiveState, 100);
+    });
+    
+    // 页面加载完成后更新侧边栏状态
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateSidebarActiveState);
+    } else {
+      updateSidebarActiveState();
+    }
+    
+    // 创建回到顶部和到达底部按钮
+    function createScrollButtons() {
+      // 检查是否已存在按钮
+      if (document.querySelector('.scroll-buttons')) {
+        return;
+      }
+      
+      const scrollButtons = document.createElement('div');
+      scrollButtons.className = 'scroll-buttons';
+      scrollButtons.innerHTML = `
+        <button class="scroll-button scroll-to-top" title="回到顶部">
+          <span>↑</span>
+        </button>
+        <button class="scroll-button scroll-to-bottom" title="到达底部">
+          <span>↓</span>
+        </button>
+      `;
+      document.body.appendChild(scrollButtons);
+      
+      // 回到顶部按钮事件
+      scrollButtons.querySelector('.scroll-to-top').addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // 到达底部按钮事件
+      scrollButtons.querySelector('.scroll-to-bottom').addEventListener('click', function() {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        });
+      });
+    }
+    
+    // 页面加载完成后创建滚动按钮
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', createScrollButtons);
+    } else {
+      createScrollButtons();
+    }
+    
     if (typeof navigator.serviceWorker !== 'undefined') {
       navigator.serviceWorker.register('sw.js')
     }
   </script>
   
-
-
+  <script>
+    // 右键菜单功能
+    let contextMenu = null;
+    let currentCodeBlock = null;
+    
+    // 初始化右键菜单
+    function initContextMenu() {
+      contextMenu = document.getElementById('context-menu');
+      if (!contextMenu) {
+        return;
+      }
+      
+      // 为所有代码块添加右键事件监听
+      document.addEventListener('contextmenu', function(e) {
+        const pre = e.target.closest('pre');
+        if (pre && pre.querySelector('code')) {
+          e.preventDefault();
+          currentCodeBlock = pre.querySelector('code');
+          showContextMenu(e.clientX, e.clientY);
+        }
+      });
+      
+      // 点击其他地方隐藏菜单
+      document.addEventListener('click', function() {
+        hideContextMenu();
+      });
+      
+      // 菜单项点击事件
+      contextMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const action = e.target.closest('.context-menu-item')?.dataset.action;
+        if (action) {
+          handleContextMenuAction(action);
+        }
+      });
+      
+      // 键盘事件监听
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          hideContextMenu();
+        }
+      });
+    }
+    
+    // 显示右键菜单
+    function showContextMenu(x, y) {
+      if (!contextMenu) return;
+      
+      // 确保菜单不会超出视窗
+      const menuWidth = 160;
+      const menuHeight = 80;
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+      
+      let adjustedX = x;
+      let adjustedY = y;
+      
+      if (x + menuWidth > windowWidth) {
+        adjustedX = windowWidth - menuWidth - 10;
+      }
+      
+      if (y + menuHeight > windowHeight) {
+        adjustedY = windowHeight - menuHeight - 10;
+      }
+      
+      contextMenu.style.left = adjustedX + 'px';
+      contextMenu.style.top = adjustedY + 'px';
+      contextMenu.style.display = 'block';
+    }
+    
+    // 隐藏右键菜单
+    function hideContextMenu() {
+      if (contextMenu) {
+        contextMenu.style.display = 'none';
+      }
+      currentCodeBlock = null;
+    }
+    
+    // 处理菜单项操作
+    function handleContextMenuAction(action) {
+      switch (action) {
+        case 'copy-code':
+          copyCodeContent();
+          break;
+        case 'select-all':
+          selectAllCode();
+          break;
+      }
+      hideContextMenu();
+    }
+    
+    // 复制代码内容
+    function copyCodeContent() {
+      if (!currentCodeBlock) return;
+      
+      const text = currentCodeBlock.textContent || currentCodeBlock.innerText;
+      
+      // 使用现代的 Clipboard API
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+          showCopyFeedback('复制成功');
+        }).catch(() => {
+          fallbackCopyText(text);
+        });
+      } else {
+        // 降级方案
+        fallbackCopyText(text);
+      }
+    }
+    
+    // 降级复制方案
+    function fallbackCopyText(text) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      
+      try {
+        document.execCommand('copy');
+        showCopyFeedback('复制成功');
+      } catch (err) {
+        showCopyFeedback('复制失败');
+      }
+      
+      document.body.removeChild(textArea);
+    }
+    
+    // 全选代码
+    function selectAllCode() {
+      if (!currentCodeBlock) return;
+      
+      const range = document.createRange();
+      range.selectNodeContents(currentCodeBlock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+    
+    // 显示复制反馈
+    function showCopyFeedback(message) {
+      // 创建临时提示元素
+      const feedback = document.createElement('div');
+      feedback.textContent = message;
+      feedback.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${message === '复制成功' ? '#28a745' : '#dc3545'};
+        color: white;
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 14px;
+        z-index: 10000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      `;
+      
+      document.body.appendChild(feedback);
+      
+      // 显示动画
+      setTimeout(() => {
+        feedback.style.opacity = '1';
+      }, 10);
+      
+      // 3秒后移除
+      setTimeout(() => {
+        feedback.style.opacity = '0';
+        setTimeout(() => {
+          if (feedback.parentNode) {
+            feedback.parentNode.removeChild(feedback);
+          }
+        }, 300);
+      }, 3000);
+    }
+    
+    // 页面加载完成后初始化
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initContextMenu);
+    } else {
+      initContextMenu();
+    }
+  </script>
+  
 
 </body>
 </html>

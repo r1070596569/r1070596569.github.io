@@ -1,12 +1,14 @@
-* [首页](README.md)
+##### 📖 我的学习笔记
 
 * AI智能体开发
-  * [Python学习](#python学习)
+  * [Python学习](content/python-learning/README.md)
+    * [📚 学习目录](content/python-learning/README.md)
     * [第1周：Python基础语法](content/python-learning/week1-guide.md)
     * [第2周：数据科学基础](content/python-learning/week2-guide.md)
     * [第3周：机器学习基础](content/python-learning/week3-guide.md)
     * [第4周：深度学习与强化学习](content/python-learning/week4-guide.md)
-  * [作业AI智能体架构](#作业ai智能体架构)
+  * [作业AI智能体架构](content/ai-agent-architecture/README.md)
+    * [🏗️ 架构目录](content/ai-agent-architecture/README.md)
     * [架构设计](content/ai-agent-architecture/architecture-design.md)
     * [核心功能模块](content/ai-agent-architecture/core-modules.md)
     * [智能体实现细节](content/ai-agent-architecture/agent-implementation.md)
